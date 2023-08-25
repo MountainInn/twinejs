@@ -34,7 +34,8 @@ export function passageToTwee(passage: Passage) {
 			: undefined;
 	const metadata = JSON.stringify({
 		position: `${passage.left},${passage.top}`,
-		size: `${passage.width},${passage.height}`
+		size: `${passage.width},${passage.height}`,
+        id: `${passage.id}`
 	}).replace(/\s+/g, '');
 	const escapedText = escapeForTweeText(passage.text);
 
